@@ -1,2 +1,2 @@
-# typed-photoshop
-TypeScript typings for Photoshop ExtendScript
+# Typed Photoshop ExtendScript
+TypeScript typings for Photoshop ExtendScript.
