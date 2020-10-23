@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "description": "TypeScript typings for Photoshop ExtendScript.",
   "main": "index.js",
-  "keywords": ["ExtendScript", "Typings", "Typed"],
+  "keywords": [
+    "ExtendScript",
+    "Typings",
+    "Typed"
+  ],
   "types": "./types/index.d.ts",
   "scripts": {},
   "repository": {
