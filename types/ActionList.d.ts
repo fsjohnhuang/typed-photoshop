@@ -1,3 +1,3 @@
-declare class ActionList {
+declare interface ActionList {
 
 }
