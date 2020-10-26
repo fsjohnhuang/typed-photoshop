@@ -1,1 +1,2 @@
-declare class LayerSet {}
+declare class LayerSet {
+}

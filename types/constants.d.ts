@@ -183,3 +183,60 @@ declare enum ColorProfileType {
      NOEN,
      WORKING
 }
+
+/**
+ * The color model to use for a `SolidColor`.
+ */
+declare enum ColorModel {
+     CMYK,
+     GRAYSCALE,
+     HSB,
+     LAB,
+     NONE,
+     RGB
+}
+
+/**
+ * The copyright status of a document.
+ * Used in `DocumentPrintSettings.copyrighted`.
+ */
+declare enum CopyrightedType {
+     COPYRIGHTEDWORK,
+     PUBLICDOMAIN,
+     UNMARKED
+}
+
+/**
+ * The editorial urgency status of a document, set in 
+ * `DocumentPrintSettings.urgency`.
+ */
+declare enum Urgency {
+     FOUR,
+     HIGH,
+     LOW,
+     NONE,
+     NORMAL,
+     SEVEN,
+     SIX,
+     THREE,
+     TWO
+}
+
+/**
+ * The role of `PathPoint` plays in a `PathItem`.
+ */
+declare enum PointKind {
+     CORNERPOINT,
+     SMOOTHPOINT
+}
+
+/**
+ * How to combine the shapes if the destination path already has a section.
+ * Set for `SubPathInfo.operation`, stored in the resulting `SubPathItem`.  
+ */
+declare enum ShapeOperation {
+     SHAPEADD,
+     SHAPEINTERSECT,
+     SHAPESUBTRACT,
+     SHAPEXOR
+}
