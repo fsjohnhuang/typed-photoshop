@@ -25,5 +25,6 @@
   "homepage": "https://github.com/fsjohnhuang/typed-photoshop#readme",
   "devDependencies": {
     "typescript": "^4.0.3"
-  }
+  },
+  "dependencies": {}
 }

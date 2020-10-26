@@ -6,8 +6,14 @@
 type activeDocument = Document
 type version = string 
 
+/** Loads a support file(as opposed to a Photoshop image document) from the specified location. */
+type load = (document: File) => void
 /** Plays an Action Manager event. */
 type executeAction = (eventID: number, descriptor?: ActionDescriptor, displayDialogs?: DialogModes) => ActionDescriptor 
+/** Converts from a character code(character ID) to a number ID. */
+type charIDToTypeID = (charID: string) => number
+/** Converts from a string ID to a runtime ID. */
+type stringIDToTypeID = (stringID: string) => number
 
 /**
  * The Adobe Photoshop application object, which is the root of the object model and provides access to all other objects.
@@ -21,10 +27,18 @@ declare type Application = {
     readonly activeDocument: activeDocument
     version: version,
 
+    load: load
     executeAction: executeAction
+    charIDToTypeID: charIDToTypeID
+    stringIDToTypeID: stringIDToTypeID
 }
 
 declare var app: Application
+
 declare var activeDocument: activeDocument
 declare var version: version 
+
+declare var load: load
 declare var executeAction: executeAction 
+declare var charIDToTypeID: charIDToTypeID
+declare var stringIDToTypeID: stringIDToTypeID

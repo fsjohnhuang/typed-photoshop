@@ -6,4 +6,4 @@ declare interface FileConstructor {
     new(path: string): File
 }
 
-declare var File: File
+declare var File: FileConstructor

@@ -5,8 +5,8 @@
 declare class ActionDescriptor {
     /** Read-only. The number of keys contained in the descriptor. */ 
     readonly count: number
-    /** Read-only. The class name of the referenced actionDescriptor object. */
-    readonly tyepname: string
+    /** Read-only. The class name of the referenced ActionDescriptor object. */
+    readonly typename: string
 
     /** Clears the descriptor. */
     clear(): void
