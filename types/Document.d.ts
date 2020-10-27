@@ -105,7 +105,7 @@ declare class Document {
      */
     readonly typename: string
     /** Read-only. The width of the document(unit value). */
-    readonly width: UniteValue
+    readonly width: UnitValue
     /** Read-only. XMP metadata for the document. Camera RAW settings for the image are stored here for example. */
     readonly xmpMetadata: xmpMetadata
 
@@ -120,7 +120,7 @@ declare class Document {
      * Closes the document. If any changes have been made, the script presents an alert with three options: save, do not save, prompt to save.
      * The optional parameter specifies a selection in the alert box(default: SaveOptionsType.PROMPTTOSAVECHANGES)
      */
-    close(saving = SaveOptions.PROMPTTOSAVECHANGES): void
+    close(saving?: SaveOptions): void
     /**
      * Chnages the color profile.
      * The `desitinationProfile` parameter must be either a string that names the color mode or `Working RGB`, `Working CMYK`
@@ -222,5 +222,5 @@ declare class Document {
      * Trims the transparent area around the image on the specified sides of the canvas.
      * Default is `true` for all Boolean parameters.
      */
-    trim(type?: TrimType, top = true, left = true, bottom = true, right = true): void
+    trim(type?: TrimType, top?: boolean, left?: boolean, bottom?: boolean, right?: boolean): void
 }

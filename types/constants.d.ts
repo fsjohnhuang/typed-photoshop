@@ -240,3 +240,132 @@ declare enum ShapeOperation {
      SHAPESUBTRACT,
      SHAPEXOR
 }
+
+/**
+ * The type of `PathItem`
+ */
+declare enum PathKind {
+     CLIPPINGPATH,
+     NORMALPATH,
+     TEXTMASK,
+     VECTORMASK,
+     WORKPATH
+}
+
+/**
+ * The way color should be blended in a fill or stroke operation.
+ * Pass to `PathItem.fillPath()`, `Selection.fill()`, `Selection.stroke()`.
+ */
+declare enum ColorBlendMode {
+     BEHIND,
+     CLEAR,
+     COLOR,
+     COLORBURN,
+     COLORDODGE,
+     DARKEN,
+     DARKERCOLOR,
+     DIFFERENCE,
+     DISSOLVE,
+     EXCLUSION,
+     HARDLIGHT,
+     HARDMIXBLEND,
+     HUE,
+     LIGHTEN,
+     LIGHTERCOLOR,
+     LINEARBURN,
+     LINERDODGE,
+     LINEARLIGHT,
+     LUMINOSITY,
+     MULTIPLY,
+     NORMAL,
+     OVERLAY,
+     PRINLIGHT,
+     SATURATION,
+     SCREEN,
+     SOFTLIGHT,
+     VIVIDLIGHT
+}
+
+/**
+ * The selection behavior when a selection already exists:
+ * `DIMINISH`: Removes the selection from the already selected area.
+ * `EXTEND`: Add the selection to an already selected area.
+ * `INTERSECT`: Make the selection only the area where the new selection intersects the already selected area.
+ * Use in `PathItem.makeSelection()`, `Selection.load()`, `Selection.select()`, and `Selection.store()`.
+ */
+declare enum SelectionType {
+     DIMINISH,
+     EXTEND,
+     INTERSECT,
+     REPLACE
+}
+
+/**
+ * The tool to use with `PathItem.strokePath()`.
+ */
+declare enum ToolType {
+     ARTHISTORYBRUSH,
+     BACKGROUNDERASER,
+     BLUR,
+     BRUSH,
+     CLONESTAMP,
+     COLORREPLACEMENTTOOL,
+     DODGE,
+     ERASER,
+     HEALINGBRUSH,
+     HISTORYBRUSH,
+     PATTERNSTAMP,
+     PENCIL,
+     SHARPEN,
+     SMUDGE,
+     SPONGE
+}
+
+/**
+ * The new color profile or mode for a document, specified in `Document.changeMode()`.
+ * *Note:*
+ * Color images must be changed to `GRAYSCALE` mode before you can change them to `BITMAP` mode.
+ */
+declare enum ChangeMode {
+     BITMAP,
+     CMYK,
+     GRAYSCALE,
+     INDEXEDCOLOR,
+     LAB,
+     MULTICHANNEL,
+     RGB
+}
+
+/**
+ * The color space for source when printing with `Document.print()`.
+ */
+declare enum SourceSpaceType {
+     DOCUMENT,
+     PROOF
+}
+
+/**
+ * The point around which to transform an object.
+ * This is the point that does not move when an object is rotated or resized using methods
+ * in `ArtLayer`, `LayerSet` and `Selection`, or when the entire canvas is resized with `Document.resizeCanvas()`.
+ */
+declare enum AnchorPosition {
+     BOTTOMCENTER,
+     BOTTOMLEFT,
+     BOTTOMRIGHT,
+     MIDDLECENTER,
+     MIDDLELEFT,
+     MIDDLERIGHT,
+     TOPCENTER,
+     TOPLEFT,
+     TOPRIGHT,
+}
+
+/**
+ * The placement of path or selection boundary strokes. Pass to `Selection.stroke()`.
+ */
+declare enum StrokeLocation {
+     CENTER,
+     INSIDE,
+     OUTSIDE
+}
