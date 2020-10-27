@@ -369,3 +369,225 @@ declare enum StrokeLocation {
      INSIDE,
      OUTSIDE
 }
+
+/**
+ * Specifies the quality of an image you are converted to bitmap mode.
+ * Used in `BitmapConversionOptions`.
+ */
+declare enum BitmapConversionType {
+     CUSTOMPATTERN,
+     DIFFUSIONDITHER,
+     HALFTHRESHOLD,
+     HALFTONESCREEN,
+     PATTERNDITHER
+}
+
+/** 
+ * Specifies the shape of the dots(ink deposits) in the halftone sreen.
+ * Used in `BitmapConverionOptions`.
+ */
+declare enum BitmapHalfToneType {
+     CROSS,
+     DIAMOND,
+     ELLIPSE,
+     LINE,
+     ROUND,
+     SQUARE
+}
+
+/**
+ * The type of dithering to use in `GIFSaveOptions`, `IndexedConversionOptions` and `ExportOptionsSaveForWeb`.
+ */
+declare enum Dither {
+     DIFFUSION,
+     NOISE,
+     NONE,
+     PATTERN
+}
+
+/**
+ * The type of colors to be included the color table regardless of their usage.
+ * Used in `GIFSaveOptions` and `IndexedConversionOptions`.
+ * `BLACKWHITE`: Pure black and pure white.
+ * `NONE`: None
+ * `PRIMARIES`: Red, green, blue, cyan, magenta, yellow, black and white.
+ * `WEB`: the 216 web-sefe colors.
+ */
+declare enum ForcedColors {
+     BLACKWHITE,
+     NONE,
+     PRIMARIES,
+     WEB
+}
+
+/**
+ * The color to use to fill anti-aliased edges adjacent to transparent areas of the image.
+ * When transparency is turned off for an image, the matte color is applied to transparent areas.
+ * Used in `GIFSaveOptions`, `IndexedConversionOptions` and `JPEGSaveOptions`.
+ */
+declare enum MatteType {
+     BACKGROUND,
+     BLACK,
+     FOREGROUND,
+     NETSCAPE,
+     NONE,
+     SEMIGRAY,
+     WHITE
+}
+
+/**
+ * The palette type to use in `GIFSaveOptions` and `IndexedConversionOptions`.
+ */
+declare enum PaletteType {
+     EXACT,
+     LOCALADAPTIVE,
+     LOCALPERCEPTUAL,
+     LOCALSELECTIVE,
+     MACOSPALETTE,
+     MACOSADAPTIVE,
+     MACOSPERCEPTUAL,
+     MACOSSELECTIVE,
+     PREVIOUSPALETTE,
+     UNIFORM,
+     WEBPALETTE,
+     WINDOWSPALETTE
+}
+
+/**
+ * The paths to export to illustrator file using `Document.exportDocument()`.
+ */
+declare enum IllustratorPathType {
+     ALLPATHS,
+     DOCUMENTBOUNDS,
+     NAMEDPATH
+}
+
+/**
+ * The color reduction algorithm option for `ExportOptionsSaveForWeb`.
+ */
+declare enum ColorReductionType {
+     ADAPTIVE,
+     BLACKWHITE,
+     CUSTOM,
+     GRAYSCALE,
+     MACINTOSH,
+     PERCEPTUAL,
+     RESTRICTIVE,
+     SELECTIVE,
+     WINDOWS
+}
+
+/**
+ * The format in which to save a document when exporting with `Document.exportDocument()`.
+ * Pass in `ExportOptionsSaveForWeb.format`, to specify the type of file to write.
+ * Only the following are supported for export `COMPUSERVEGIF, JPEG, PNG-8, PNG-24` and `BMP`.
+ */
+declare enum SaveDocumentType {
+     ALIASPIX,
+     BMP,
+     COMPUSERVEGIT,
+     ELECTRICIMAGE,
+     JPEG,
+     PCX,
+     PHOTOSHOP,
+     PHOTOSHOPDCS_1,
+     PHOTOSHOPDCS_2,
+     PHOTOSHOPEPS,
+     PHOTOSHOPPDF,
+     PICTFileFORMAT,
+     PICTRESOUCEFORMAT,
+     PIXAR,
+     PNG,
+     PORTABLEBITMAP,
+     RAW,
+     SCITEXCT,
+     SGIRGB,
+     SOFTIMAGE,
+     TARGA,
+     TIFF,
+     WAVEFRONTRLA,
+     WIRELESSBITMAP
+}
+
+/**
+ * The measurement to act upon. Pass to `MeasurementLog` methods.
+ */
+declare enum MeasurementSource {
+     ALLMEASUREMENTS,
+     ACTIVEMEASUREMENTS
+}
+
+/**
+ * The method to use for image interpolation. Passed to `Document.resizeImage()` and used as the value of `Preferences.interpolation`.
+ */
+declare enum ResampleMethod {
+     AUTOMATIC,
+     BICUBIC,
+     BICUBICAUTOMATIC,
+     BICUBISHARPER,
+     BICUBISMOOTHER,
+     BILINEAR,
+     NEARESTNEIGHBOR,
+     NONE,
+     PRESERVEDETAILS
+}
+
+/**
+ * The type of a color channel:
+ * `COMPONENT`: related to doucument color mode.
+ * `MASKEDAREA`: Alpha channel where color indicates masked area.
+ * `SELECTEDAREA`: Alpha channel where color indicates selected are.
+ * `SPOTAREA`: Alpha channel to store a spot color.
+ */
+declare enum ChannelType {
+     COMPONENT,
+     MASKEDAREA,
+     SELECTEDAREA,
+     SPOTCOLOR
+}
+
+/**
+ * Controls how pixels in an image are blended when a filter is applied.
+ * The value of `ArtLayer.blendMode` and `LayerSet.blendMode`.
+ */
+declare enum BlendMode {
+     COLORBLEND,
+     COLORBURN,
+     COLORDODGE,
+     DARKEN,
+     DIFFERENCE,
+     DISSOLVE,
+     DIVIDE,
+     EXCLUSION,
+     HARDLIGHT,
+     HARDMIX,
+     HUE,
+     LIGHTEN,
+     LINEARBURN,
+     LINEARDODGE,
+     LINEARLIGHT,
+     LUMINOSITY,
+     MULITPLY,
+     NORMAL,
+     OVERLAY,
+     PASSTHROUGH,
+     PINLIGHT,
+     SATURATION,
+     SCREEN,
+     SOFTLIGHT,
+     SUBTRACT,
+     VIVIDLIGHT
+}
+
+/**
+ * The object's position in the Layers palette.
+ * *Note:*
+ * Not all values are valid for all object types. See the specific object description to make sure you are using a valid value.
+ */
+declare enum ElementPlacement {
+     INSIDE,
+     PLACEATBEGINNING,
+     PLACEATEND,
+     PLACEBEFORE,
+     PLACEAFTER
+}
