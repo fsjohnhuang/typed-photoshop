@@ -4,6 +4,7 @@
  * Acess the nested layer sets through the `LayerSet.layerSets` collection property in the parent set.
  */
 declare class LayerSets {
+    [index: number]: LayerSet
     /** Read-only. The number of elements in the LayerSets collection. */
     readonly length: number
     /** Read-only. The containing document or layer set. */

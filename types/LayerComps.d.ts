@@ -5,6 +5,7 @@
  * `app.activeDocument.layerComps.add("myLayerComp", "View from Shoreline", true, true, true)`
  */
 declare class LayerComps {
+    [index: number]: LayerComp
     /** Read-only. The number of elements in the LayerComps collection. */
     readonly length: number
     /** Read-only. The containing document. */

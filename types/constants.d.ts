@@ -591,3 +591,206 @@ declare enum ElementPlacement {
      PLACEBEFORE,
      PLACEAFTER
 }
+
+/**
+ * Distribution method to use when applying an Add Noise filter.
+ * Pass to `ArtLayer.applyAddNoise()`.
+ */
+declare enum NoiseDistribution {
+     GAUSSIAN,
+     UNIFORM
+}
+
+/**
+ * The type of fields to eliminate.
+ * Pass to `ArtLayer.applyDeInterlace()`.
+ */
+declare enum EliminateFields {
+     EVENFIELDS,
+     ODDFIELDS
+}
+
+/**
+ * The method to use for creating fields.
+ * Pass to `ArtLayer.applyDeInterlace()`.
+ */
+declare enum CreateFields {
+     DUPLICATION,
+     INTERPOLATION
+}
+
+/**
+ * The source to use for the depth map.
+ * Pass to `ArtLayer.applyLensBlur()`.
+ */
+declare enum DepthMapSource {
+     IMAGEHIGHTLIGHT,
+     LAYERMASK,
+     NONE,
+     TANSPARENCYCHANNEL
+}
+
+/**
+ * Describes how the displacement map fits the image if the image is not the same size as the map.
+ * Pass to `ArtLayer.applyDisplace()`.
+ */
+declare enum DisplacementMapType {
+     STRETCHTOFIT,
+     TILE
+}
+
+/**
+ * Method to use to fill the empty space left by offseting an image or selection.
+ * Pass to `ArtLayer.applyOffset()`.
+ */
+declare enum OffsetUndefinedAreas {
+     REPEATEDGEPIXELS,
+     SETTOBACKGROUND,
+     WRAPAROUND
+}
+
+/**
+ * The method to use to treat undistorted areas or areas left blank in an image to which the a filter in the Distort category has been applied.
+ * Pass to `ArtLayer.applyDisplace()`, `applyShear()`, `applyWave()`.
+ */
+declare enum UndefinedAreas {
+     REPEATEDGEPIXELS,
+     WRAPAROUND
+}
+
+/**
+ * The type of texture or glass surface image to load for a texturizer or glass filter.
+ * Pass to `ArtLayer.applyGlassEffect()`.
+ */
+declare enum TextureType {
+     BLOCKS,
+     CANVAS,
+     FILE,
+     FROSTED,
+     TINYLENS
+}
+
+/**
+ * Geometric options for shapes, such as the iris shape in the Lens Blur Filter.
+ * Pass to `ArtLayer.applyLensBlur()`.
+ */
+declare enum Geometry {
+     HEPTAGON,
+     HEXAGON,
+     OCTAGON,
+     PENTAGON,
+     SQUARE,
+     TRIANGLE
+}
+
+/**
+ * The type of lens to use.
+ * Pass to `ArtLayer.applyLensFlare()`.
+ */
+declare enum LensType {
+     MOVIEPRIME,
+     PRIME105,
+     PRIME35,
+     ZOOMLENS
+}
+
+/**
+ * The method of polar distortion to use.
+ * Pass to `ArtLayer.applyPolarCoordinates()`.
+ */
+declare enum PolarConversionType {
+     POLARTORECTANGULAR,
+     RETANGULARTOPOLAR
+}
+
+/**
+ * The blur method to use.
+ * Pass to `ArtLayer.applyRadialBlur()`.
+ */
+declare enum RadialBlurMethod {
+     SPIN,
+     ZOOM
+}
+
+/**
+ * The smoothes or graininess of the blurred image.
+ * Pass to `ArtLayer.applyRadialBlur()`.
+ */
+declare enum RadialBlurQuality {
+     BEST,
+     DRAFT,
+     GOOD
+}
+
+/**
+ * The size of undulations to use.
+ * Pass to `ArtLayer.applyRipple().`
+ */
+declare enum RippleSize {
+     LARGE,
+     MEDIUM,
+     SMALL
+}
+
+/**
+ * The method to use for smart blurring:
+ * `EDGEONLY`, `OVERLAYEDGE`: Apply blur only to edges of color transitions.
+ * `NORMAL`: Apply blur to entire image.
+ * Pass to `ArtLayer.applySmartBlur()`.
+ */
+declare enum SmartBlurMode {
+     EDGEONLY,
+     NORMAL,
+     OVERLAYEDGE
+}
+
+/**
+ * The blur quality to use.
+ * Pass to `ArtLayer.applySmartBlur()`.
+ */
+declare enum SmartBlurQuality {
+     HIGH,
+     LOW,
+     MEDIUM
+}
+
+/**
+ * The curve(or stretch shape) to use for the distortion.
+ * Pass to `ArtLayer.applySpherize()`.
+ */
+declare enum SpherizeMode {
+     HORIZONTAL,
+     NORMAL,
+     VERTICAL
+}
+
+/**
+ * The method of zigzagging to use.
+ * Pass to `ArtLayer.applyZigZag()`.
+ */
+declare enum ZigZagType {
+     AROUNDCENTER,
+     OUTFROMCENTER,
+     PONDRIPPLES
+}
+
+/**
+ * Method to use for interpreting selective color adjustment specifications:
+ * `ABSOLUTE = %` of the whole.
+ * `RELATIVE = %` of the existing color amount.
+ * Pass to `ArtLayer.selectiveColor()`.
+ */
+declare enum AdjustmentReference {
+     ABSOULTE,
+     RELATIVE
+}
+
+/**
+ * The type of wave to use.
+ * Pass to `ArtLayer.applyWave()`.
+ */
+declare enum WaveType {
+     SINE,
+     SQUARE,
+     TRIANGULAR
+}

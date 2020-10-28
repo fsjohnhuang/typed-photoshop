@@ -23,9 +23,10 @@ type stringIDToTypeID = (stringID: string) => number
  * The properties and methods of the `Application` object are also avaiable at the top level; 
  * you can omit references to the `Application` object altogether.
  */
-declare type Application = {
-    readonly activeDocument: activeDocument
-    version: version,
+declare interface Application {
+    activeDocument: activeDocument
+    version: version
+    documents: Documents
 
     load: load
     executeAction: executeAction
@@ -37,6 +38,7 @@ declare var app: Application
 
 declare var activeDocument: activeDocument
 declare var version: version 
+declare var documents: Documents
 
 declare var load: load
 declare var executeAction: executeAction 

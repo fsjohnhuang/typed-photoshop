@@ -1,4 +1,5 @@
 declare class CountItems {
+    [index: number]: CountItem
     /** Read-only. The number of elements in the CountItems collection. */
     readonly length: number
     /** Read-only. The containing document. */

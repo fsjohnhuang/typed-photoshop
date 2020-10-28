@@ -5,6 +5,7 @@
  * `activeDocument.guides.add(Direction.HORIZONTAL, UnitValue(20,20))`
  */
 declare class Guides {
+    [index: number]: Guide
     readonly length: number
     readonly parent: Document
     readonly typename: string

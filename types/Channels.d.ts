@@ -4,6 +4,7 @@
  * `var channelRef = app.activeDocument.channels.add()`
  */
 declare class Channels {
+    [index: number]: Channel
     /** Read-only. The number of elements in the Channels collection. */
     readonly length: number
     /** Read-only. The containing document. */
@@ -24,5 +25,4 @@ declare class Channels {
      * Removes all `Channel` objects from the `Channels` collection.
      */
     removeAll(): void
-}
 }
