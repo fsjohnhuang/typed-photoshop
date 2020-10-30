@@ -9,21 +9,21 @@
 declare class LayerSet {
     /** True if the contents in the layers in this set are not editable. */
     allLocked: boolean
-    /** The art layers in this layer set. */
+    /** @readonly The art layers in this layer set. */
     readonly artLayers: ArtLayer
     /** The blend mode to use for the layer set. */
     blendMode: BlendMode
-    /** The bounding rectangle of the layer set. */
+    /** @readonly The bounding rectangle of the layer set. */
     readonly bounds: UnitValue[]
     /** 
      * The channels enabled for the layer set; must be a list of component channels. See `Channel.kind`.
      */
     enableChannels: Channel[]
-    /** The layers in this set. */
+    /** @readonly The layers in this set. */
     readonly layers: Layers
-    /** Nested layer sets contained within this layer set. */
+    /** @readonly Nested layer sets contained within this layer set. */
     readonly layerSets: LayerSets
-    /** The layers linked to this layerSet object. */
+    /** @readonly The layers linked to this layerSet object. */
     readonly linkedLayers: ArtLayer[] | LayerSet[]
     /** The name of this layer set. */
     name: string

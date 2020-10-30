@@ -5,6 +5,6 @@ declare class LabColor {
     b: number
     /** Read-write. The l-value(as percent in [0.0..100.00]). */
     l: number
-    /** Read-only. The class name of referenced LabColor object. */
+    /** @readonly The class name of referenced LabColor object. */
     readonly typename: string
 }

@@ -2,11 +2,12 @@
  * The collection of `PathItem` objects in the document.
  */
 declare class PathItems {
-    /** Read-only. The number of elements in the PathItems collection. */
+    readonly [index: number]: PathItem
+    /** @readonly The number of elements in the PathItems collection. */
     readonly length: number
-    /** Read-only. The containing document. */
+    /** @readonly The containing document. */
     readonly parent: Document 
-    /** Read-only. The class name of the referenced PathItems object. */
+    /** @readonly The class name of the referenced PathItems object. */
     readonly typename: string
 
     /** Creates a new layer set composition object and adds it into this collection. */

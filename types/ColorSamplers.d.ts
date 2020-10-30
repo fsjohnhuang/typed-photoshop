@@ -1,9 +1,10 @@
 declare class ColorSamplers {
-    /** Read-only. The number of elements in the ColorSamplers collection. */
+    readonly [index: number]: ColorSampler
+    /** @readonly The number of elements in the ColorSamplers collection. */
     readonly length: number
-    /** Read-only. The containing document. */
+    /** @readonly The containing document. */
     readonly parent: Document
-    /** Read-only. The class name of the referenced ColorSamplers object. */
+    /** @readonly The class name of the referenced ColorSamplers object. */
     readonly type: string
 
     /**

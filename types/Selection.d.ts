@@ -5,10 +5,10 @@
  * Many of the properties and methods use the `UnitValue` type, which combines measurement values with the measurement unit.
  */
 declare class Selection {
-    /** The bounding rectangle of the entire selection. */
+    /** @readonly The bounding rectangle of the entire selection. */
     readonly bounds: UnitValue[]    
     readonly parent: Document
-    /** True if the bounding rectangle is a solid. */
+    /** @readonly True if the bounding rectangle is a solid. */
     readonly solid: boolean
     readonly typename: string
 

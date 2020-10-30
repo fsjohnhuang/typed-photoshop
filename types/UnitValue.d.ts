@@ -1,11 +1,6 @@
 type Unit = 'px' | 'pt' | 'in' | 'pc' | 'cm' | '%' | 'mm'
 
-declare interface UnitValue {}
-declare var UnitValue: {
-    new(): UnitValue 
-    new(x: number, y: number): UnitValue
-    new(unitValue: string): UnitValue
-
+declare interface UnitValue {
     /**
      * Converts to the value represented in indicated unit without change the original one.
      * @example
@@ -23,3 +18,12 @@ declare var UnitValue: {
      */
     convert(unit: Unit): boolean
 }
+
+declare interface UnitValueConstructor {
+    new (x: number, y: number): UnitValue
+    new (unitValue: string): UnitValue
+    (unitValue: string): UnitValue
+    (x: number, y: number): UnitValue
+}
+
+declare var UnitValue: UnitValueConstructor & object

@@ -3,9 +3,9 @@
  * It can be used for low-level access into Photoshop.
  */
 declare class ActionDescriptor {
-    /** Read-only. The number of keys contained in the descriptor. */ 
+    /** @readonly The number of keys contained in the descriptor. */ 
     readonly count: number
-    /** Read-only. The class name of the referenced ActionDescriptor object. */
+    /** @readonly The class name of the referenced ActionDescriptor object. */
     readonly typename: string
 
     /** Clears the descriptor. */

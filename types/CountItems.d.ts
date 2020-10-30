@@ -1,10 +1,10 @@
 declare class CountItems {
-    [index: number]: CountItem
-    /** Read-only. The number of elements in the CountItems collection. */
+    readonly [index: number]: CountItem
+    /** @readonly The number of elements in the CountItems collection. */
     readonly length: number
-    /** Read-only. The containing document. */
+    /** @readonly The containing document. */
     readonly parent: Document
-    /** Read-only. The class name of the referenced CountItems object. */
+    /** @readonly The class name of the referenced CountItems object. */
     readonly typename: string
 
     /**

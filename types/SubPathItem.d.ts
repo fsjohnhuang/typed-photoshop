@@ -6,16 +6,16 @@
  * Use the `SubPathItem` object to retrieve information about existing subpaths. The properties are read-only.
  */
 declare class SubPathItem {
-    /** Read-only. True if the path is closed. */
+    /** @readonly True if the path is closed. */
     readonly closed: boolean
     /** 
-     * Read-only. How this object behaves when is intersects another `SubPathItem` object.
+     * @readonly How this object behaves when is intersects another `SubPathItem` object.
      * Specifies how to combine the shapes if the destination path already has a selection.
      */
     readonly operation: ShapeOperation
     readonly parent: PathItem
     /**
-     * Read-only. The `PathPoitns` collection.
+     * @readonly The `PathPoitns` collection.
      */
     readonly pathPoints: PathPoints
     readonly typename: string

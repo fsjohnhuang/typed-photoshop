@@ -4,12 +4,12 @@
  * `var channelRef = app.activeDocument.channels.add()`
  */
 declare class Channels {
-    [index: number]: Channel
-    /** Read-only. The number of elements in the Channels collection. */
+    readonly [index: number]: Channel
+    /** @readonly The number of elements in the Channels collection. */
     readonly length: number
-    /** Read-only. The containing document. */
+    /** @readonly The containing document. */
     readonly parent: Document
-    /** Read-only. The class name of the referenced Channels object. */
+    /** @readonly The class name of the referenced Channels object. */
     readonly typename: string
 
     /**

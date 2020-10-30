@@ -14,7 +14,7 @@ declare class LayerComp {
     readonly parent: Document
     /** Read-write. True to use layer position. */
     position: boolean
-    /** Read-only. True if the layer comp is currently selected. */
+    /** @readonly True if the layer comp is currently selected. */
     readonly selected: boolean
     readonly typename: string
     /** Read-write. True to use layer visibility settings. */

@@ -10,14 +10,14 @@
  * you use the right direction point to bend the curve "inward" or make it concave.
  */
 declare class PathPoint {
-    /** Read-only. The X and Y coordinates of the anchor point of the curve. */
+    /** @readonly The X and Y coordinates of the anchor point of the curve. */
     readonly anchor: number[]
-    /** Read-only. The role(corner or smooth) this point plays in the containing path segment. */
+    /** @readonly The role(corner or smooth) this point plays in the containing path segment. */
     readonly kind: PointKind
-    /** Read-only. The location of the left-direction endpoint(`in` position) */
+    /** @readonly The location of the left-direction endpoint(`in` position) */
     readonly leftDirection: number[]
     readonly parent: SubPathItem
-    /** Read-only. The location of the right-direction endpoint(`out` position) */
+    /** @readonly The location of the right-direction endpoint(`out` position) */
     readonly rightDirection: number[]
     readonly typename: string
 }

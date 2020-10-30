@@ -7,7 +7,7 @@
  */
 declare class ActionReference{
     /** 
-     * Read-only. The class name of the referenced `ActionReference` object 
+     * @readonly The class name of the referenced `ActionReference` object 
      */
     readonly typename: string
 

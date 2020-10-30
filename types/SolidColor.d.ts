@@ -18,7 +18,7 @@ declare class SolidColor {
     readonly nearestWebColor: RGBColor
     /** Read-write. The RGB color mode. */
     rgb: RGBColor
-    /** Read-only. The class name of the referenced ColoSolid object. */
+    /** @readonly The class name of the referenced ColoSolid object. */
     readonly typename: string
 
     /** True if the SolidColor object is visually equal to the specified color. */

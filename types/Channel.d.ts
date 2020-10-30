@@ -13,7 +13,7 @@ declare class Channel {
      */
     color: SolidColor
     /**
-     * A histogram of the color of the channel.
+     * @readonly A histogram of the color of the channel.
      * The array contains 256 members.
      * Not valid when `kind = ChannelType.COMPONENT`. For component channel histogram values,
      * use the histogram property of the Document object instead.

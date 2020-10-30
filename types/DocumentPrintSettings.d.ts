@@ -16,7 +16,7 @@ declare class DocumentPrintSettings {
     copies: number
     /** Print corner crop marks */
     cornerCropMarks: boolean
-    /** Color handling. */
+    /** @readonly Color handling. */
     readonly colorHandling: PrintColorHandling
     /** The current active printer. */
     activePrinter: string
@@ -33,9 +33,9 @@ declare class DocumentPrintSettings {
     negative: boolean
     /** Color conversation intent when print space is different from the source space.  */
     redenerIntent: Intent
-    /** The x position of the image on page. */
+    /** @readonly The x position of the image on page. */
     readonly posX: UnitValue
-    /** The y position of the image on page. */
+    /** @readonly The y position of the image on page. */
     readonly posY: UnitValue
     /** The width of the print border. */
     printBorder: UnitValue
@@ -48,7 +48,7 @@ declare class DocumentPrintSettings {
     printSpace: string
     /** Print registration marks. */
     registrationMarks: boolean
-    /** Scale of image on page. */
+    /** @readonly Scale of image on page. */
     readonly scale: number
     /** Include vector data. */
     vectorData: boolean

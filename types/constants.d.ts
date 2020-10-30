@@ -512,9 +512,19 @@ declare enum SaveDocumentType {
 /**
  * The measurement to act upon. Pass to `MeasurementLog` methods.
  */
-declare enum MeasurementSource {
+declare enum MeasurementRange {
      ALLMEASUREMENTS,
      ACTIVEMEASUREMENTS
+}
+
+/**
+ * The source for recording measurements.
+ * Pass to `Document.recordMeasurements()`.
+ */
+declare enum MeasurementSource {
+     MEASURESELECTION,
+     MEASURECOUNTTOOL,
+     MEASURERULERTOOL
 }
 
 /**
@@ -793,4 +803,584 @@ declare enum WaveType {
      SINE,
      SQUARE,
      TRIANGULAR
+}
+
+/**
+ * The color profile to use for a new document.
+ * Pass to `Document.add()`.
+ * Also used in `ContractSheetOptions` and `PicturePackageOptions`.
+ */
+declare enum NewDocumentMode {
+     BITMAP,
+     CMYK,
+     GRAYSCALE,
+     LAB,
+     RGB
+}
+
+/**
+ * The fill type of a new document, passed to `Document.add()`.
+ */
+declare enum DocumentFill {
+     BACKGROUNDCOLOR,
+     TRANSPARENT,
+     WHITE
+}
+
+/**
+ * The destination, if any, for batch-processed files, specified in the `BatchOptions` used with the `Application.batch()` method.
+ * `FOLDER`: Save modified versions of the files to a new location(leaving the originals unchanged).
+ * `NODESTINATION`: Leaves all files open.
+ * `SAVEANDCLOSE`: Save changes and close the files.
+ */
+declare enum BatchDestinationType {
+     FOLDER,
+     NODESTINATION,
+     SAVEANDCLOSE
+}
+
+/**
+ * File naming options for the `BatchOptions` used with the `Application.batch()` method.
+ */
+declare enum FileNamingType {
+     DDMM,
+     DDMMYY,
+     DOCUMENTNAMELOWER,
+     DOCUMENTNAMEMIXED,
+     DOCUMENTNAMEUPPER,
+     EXTENDSIONLOWER,
+     EXTENDSIONUPPER,
+     MMDD,
+     MMDDYY,
+     SERIALLETTERLOWER,
+     SERIALLETTERUPPER,
+     SERIALNUMBER1,
+     SERIALNUMBER2,
+     SERIALNUMBER3,
+     SERIALNUMBER4,
+     YYDDMM,
+     YYMMDD,
+     YYYYMMDD
+}
+
+/**
+ * The fonts to use for the Web photo gallery captions and other text.
+ * Used in `GalleryBannerOptions`, `GalleryImagesOptions` and `GalleryThumbnailOptions`.
+ * Also used in `PicturePackageOptions`.
+ */
+declare enum GalleryFontType {
+     ARIAL,
+     COURIERNEW,
+     HELVETICA,
+     TIMESNEWROMAN
+}
+
+/**
+ * The type of magnification to use when viewing an image.
+ * Used in `PresentationOptions`.
+ */
+declare enum MagnificationType {
+     ACTUALSIZE,
+     FITPAGE
+}
+
+/**
+ * The method to use for transition from one image to the next in a PDF presentation.
+ * Used in `PresentationOptions`.
+ */
+declare enum TransitionType {
+     BLINDSHORIZONTAL,
+     BLINDSVERTICAL,
+     BOXIN,
+     BOXOUT,
+     DISSOLVE,
+     GLITTERDOWN,
+     GLITTERRIGHT,
+     GLITTERRIGHTDOWN,
+     NONE,
+     RANDOM,
+     SPLITHORIZONTALIN,
+     SPLITHORIZONTALOUT,
+     SPLITVERTICALOUT,
+     WIPEDOWN,
+     WIPELEFT,
+     WIPERIGHT,
+     WIPEUP
+}
+
+/**
+ * The color to use for text displayed over gallery images as an antitheft deterrent.
+ * Used in `GallerySecurityOptions`.
+ * Also used in `PicturePackageOptions`.
+ */
+declare enum GallerySecurityTextColorType {
+     BLACK,
+     CUSTOM,
+     WHITE
+}
+
+/**
+ * The position of the text displayed over gallery images as an antitheft deterrent.
+ * Used in `GalleryOptions`.
+ * Also used in `PicturePackageOptions`.
+ */
+declare enum GallerySecurityTextPositionType {
+     CENTERED,
+     LOWERLEFT,
+     LOWERRIGHT,
+     UPPERLEFT,
+     UPPERRIGHT
+}
+
+/**
+ * The orientation of the text displayed over gallery iimages as an antitheft deterrent.
+ * Used in `GalleryOptions`.
+ * Also used in `PicturePackageOptions`.
+ */
+declare enum GallerySecurityTextRotateType {
+     CLOCKWISE45,
+     CLOCKWISE90,
+     COUNTERCLOCKWISE45,
+     COUNTERCLOCKWISE90,
+     ZERO
+}
+
+/**
+ * The content to use for text displayed over gallery images as an antitheft deterrent.
+ * Used in `GallerySecurityOptions`.
+ * *Note:*
+ * All types draw from the image's file information except `CUSTOMTEXT`.
+ */
+declare enum GallerySecurityType {
+     CAPTION,
+     COPYRIGHT,
+     CREDIT,
+     CUSTOMTEXT,
+     FILENAME,
+     NONE,
+     TITLE
+}
+
+/**
+ * The size of thumbnail images in the web photo gallery.
+ * Used in `GalleryThumbnailOptions`.
+ */
+declare enum GalleryThumbSizeType {
+     CUSTOM,
+     LARGE,
+     MEDIUM,
+     SMALL
+}
+
+/**
+ * The type of proportions to constrain for images.
+ * Used in `GalleryImagesOptions`.
+ */
+declare enum GalleryConstrainType {
+     CONSTRAINBOTH,
+     CONSTRAINHEIGHT,
+     CONSTRAINWIDTH
+}
+
+/**
+ * The function or meaning of text in a Picture Package.
+ * Used in `PicturePackageOptions`.
+ */
+declare enum PicturePackageTextType {
+     CAPTION,
+     COPYRIGHT,
+     CREDIT,
+     FILENAME,
+     NONE,
+     ORIGIN,
+     USER
+}
+
+/**
+ * The format in which to open the document, using `app.open()`.
+ * *Note:* `PHOTOCD` is deprecated. Kodak PhotoCD is now found in the Goodies folder on the Adobe Photoshop Install DVD.
+ * *Note:* The `DICOM` options is for the Extended Version only.
+ */
+declare enum OpenDocumentType {
+     ALIASPIX,
+     BMP,
+     CAMERARAW,
+     COMPUSERVERGIF,
+     DICOM,
+     ELECTRICIMAGE,
+     EPS,
+     EPSPICTUREVIEW,
+     EPSTIFFPREVIEW,
+     FILMSTRIP,
+     JPEG,
+     PCX,
+     PDF,
+     PHOTOCD,
+     PHOTOSHOP,
+     PHOTOSHOPDCS_1,
+     PHOTOSHOPDCS_2,
+     PHOTOSHOPEPS,
+     PHOTOSHOPPDF,
+     PICTFILEFORMAT,
+     PICTRESOURCEFORMAT,
+     PIXAR,
+     PNG,
+     PORTABLEBITMAP,
+     RAW,
+     SCITEXCT,
+     SGIRGB,
+     SOFTIMAGE,
+     TARGA,
+     TIFF,
+     WAVEFRONTRLA,
+     WIRELESSBITMAP
+}
+
+/**
+ * Cache to be targeted in an `Application.purge()` operation.
+ */
+declare enum PurgeTarget {
+     ALLCACHES,
+     CLIPBOARDCACHE,
+     HISTORYCACHES,
+     UNDOCACHES
+}
+
+/**
+ * The down sample method to use.
+ * Used in `PDFSaveOptions`.
+ */
+declare enum PDFResample {
+     NONE,
+     PDFAVERAGE,
+     PDFBICUBIC,
+     PDFSUBSAMPLE
+}
+
+/**
+ * The type of compression to use when saveing a document in PDF format.
+ * Used in `PDFSaveOptions`.
+ */
+declare enum PDFEncoding {
+     JPEG,
+     JPEG2000HIGH,
+     JPEG2000LOSSLESS,
+     JPEG2000LOW,
+     JPEG2000MED,
+     JPEG2000MEDHIGH,
+     JPEG2000MEDLOW,
+     JPEGHIGH,
+     JPEGLOW,
+     JPEGMED,
+     JPEGMEDHIGH,
+     JPEGMEDLOW,
+     NONE,
+     PDFZIP,
+     PDFZIP4BIT
+}
+
+/**
+ * The PDF version to make the document compatible with.
+ * Used in `PDFSaveOptions`.
+ */
+declare enum PDFCompatibility {
+     PDF13,
+     PDF14,
+     PDF15,
+     PDF16,
+     PDF17,
+}
+
+/**
+ * The PDF standard to make the document compatible with.
+ * Used in `PDFSaveOptions`.
+ */
+declare enum PDFStandard {
+     NONE,
+     PDFX1A2001,
+     PDFX1A2003,
+     PDFX32002,
+     PDFX32003,
+     PDFX42008
+}
+
+/**
+ * The application's preferred behavior when saving a document.
+ * See `Preferences.appendExtension` and `imagePreviews`.
+ */
+declare enum SaveBehavior {
+     ALWAYSSAVE,
+     ASKWHENSAVING,
+     NEVERSAVE
+}
+
+/**
+ * The preferred color-selection tool, set in `Preferences`.
+ */
+declare enum ColorPicker {
+     ADOBE,
+     APPLE,
+     PLUGIN,
+     WINDOWS
+}
+
+/**
+ * The preferred level of detail in the history log, set in `Preferences`:
+ * `CONCISE`: Save a concise history log.
+ * `DETAILED`: Save a detailed history log.
+ * `SESSIONONLY`: Save history log only for a session.
+ */
+declare enum EditLogItemsType {
+     CONCISE,
+     DETAILED,
+     SESSIONONLY
+}
+
+/**
+ * The preferred type size to use for font previews in the type tool font menus, set in `Preferences`.
+ */
+declare enum FontPreviewType {
+     HUGE,
+     EXTRALARGE,
+     LARGE,
+     MEDIUM,
+     NONE,
+     SMALL
+}
+
+/**
+ * The preferred line style for the nonprinting grid displayed over images, set in `Preferences`.
+ */
+declare enum GridLineStyle {
+     DASHED,
+     DOTTED,
+     SOLID
+}
+
+/**
+ * The preferred size of grid line spacing, set in `Preferences`.
+ */
+declare enum GridSize {
+     LARGE,
+     MEDIUM,
+     NONE,
+     SMALL
+}
+
+/**
+ * The preferred line style for the nonprinting grid displayed over images, set in `Preferences`.
+ */
+declare enum GuideLineStyle {
+     DASHED,
+     SOLID
+}
+
+/**
+ * The preferred policy for checking whether to maximize compatibility when opening PSD files, set in `Preferences.maximizeCompatibility`.
+ */
+declare enum QueryStateType {
+     ALWAYS,
+     ASK,
+     NEVER
+}
+
+/**
+ * The preferred pointer for the following tools:
+ * Eraser, Pencil, Paintbrush, Healing Brush, Rubber Stamp, Pattern Stamp, Smudge, Blur, Sharpen, Dodge, Burn, Sponge.
+ * Set in `Preferences`.
+ */
+declare enum OtherPaintingCursors {
+     PRECISEOTHER,
+     STANDARDOTHER
+}
+
+/**
+ * The preferred pointer for the following tools:
+ * Marquee, Lasso, Polygonal Lasso, Magic Wand, Crop, Slice, Patch Eyedropper, Pen, Gradient, Line, Paint Bucket, Magnetic Lasso, Magnetic Pen, Freeform Pen, Measure, Color Sampler.
+ * Set in `Preferences`.
+ */
+declare enum PaintingCursors {
+     BRUSHSIZE,
+     PRECISE,
+     STANDARD
+}
+
+/**
+ * The preferred measurement to use for type points, set in `Preferences.pointSize`:
+ * `POSTSCRIPT` = 72 points/inch.
+ * `TRADITIONAL` = 72.27 points/inch.
+ */
+declare enum PointType {
+     POSTSCRIPT,
+     TRADITIONAL
+}
+
+/**
+ * The preferred location of history log data, set in `Preferences.saveLogItems`.
+ */
+declare enum SaveLogItemsType {
+     LOGFILE,
+     LOGFILEANDMETADATA,
+     METADATA
+}
+
+/**
+ * The preferred type size to use for panels and dialogs, set in `Preferences`.
+ */
+declare enum FontSize {
+     LARGE, 
+     MEDIUM,
+     SMALL
+}
+
+/**
+ * The preferred unit for text character measurements, set in `Preferences`.
+ */
+declare enum TypeUnits {
+     MM, 
+     PIXELS,
+     POINTS
+}
+
+/**
+ * The type fo color handling to use for ColorHandling.
+ */
+declare enum PrintColorHandling {
+     PRINTERMANAGED,
+     PHOTOSHOPMANAGED,
+     SEPARATIONS
+}
+
+/**
+ * Method to use to smooth edges by softening the color transition between edge pixels and background pixels.
+ * Used in `TextItem.antiAliasMethod`.
+ */
+declare enum AntiAlias {
+     CRISP,
+     NONE,
+     SHARP,
+     SMOOTH,
+     STRONG
+}
+
+/**
+ * The type of kerning to use for characters.
+ * Used in `TextItem.autoKerning`.
+ */
+declare enum AutoKernType {
+     MANUAL,
+     METRICS,
+     OPTICAL
+}
+
+/**
+ * The type of text, used in `TextItem.kind`.
+ * `PARAGRAPHTEXT`: Text that wraps within a bounding box.
+ * `POINTTEXT`: Text that does not wrap.
+ */
+declare enum TextType {
+     PARAGRAPHTEXT,
+     POINTTEXT
+}
+
+/**
+ * The capitalization style to use in text.
+ * Used in `TextItem.capitalization`.
+ */
+declare enum TextCase {
+     ALLCAPS,
+     NORMAL,
+     SMALLCAPS
+}
+
+/**
+ * The placement of paragraph text within the bounding box.
+ * Used in `TextItem.justification`.
+ */
+declare enum Justification {
+     CENTER,
+     CENTERJUSTIFIED,
+     FULLYJUSTIFIED,
+     LEFT,
+     LEFTJUSTIFIED,
+     RIGHT,
+     RIGHTJUSTIFIED
+}
+
+/**
+ * The language to use for text. Used in `TextItem.language`.
+ */
+declare enum Language {
+     BRAZILLIANPORTUGUESE,
+     CANADIANFRENCH,
+     DANISH,
+     DUTCH,
+     ENGLISHUK,
+     ENGLISHUSA,
+     FINNISH,
+     FRENCH,
+     GERMAN,
+     ITALIAN,
+     NORWEGIAN,
+     NYNORSKNORWEGIAN,
+     OLDGERMAN,
+     PORTUGUESE,
+     SPANISH,
+     SWEDISH,
+     SWISSGERMAN
+}
+
+/**
+ * The composition method to use to optimize the specified hyphenation and justification options.
+ * Used in `TextItem.textComposer`.
+ */
+declare enum TextComposer {
+     ADOBEEVERYLINE,
+     ADBOESINGLELINE     
+}
+
+/**
+ * The placement of text underlining.
+ * Used in `TextItem.underline`.
+ * *Note:*
+ * `UNDERLINELEFT` and `UNDERLINERIGHT` are valid only when `direction = Direction.VERTICAL`.
+ */
+declare enum UnderlineType {
+     UNDERLINELEFT,
+     UNDERLINEOFF,
+     UNDERLINERIGHT
+}
+
+/**
+ * The warp style to use for text.
+ * Used in `TextItem.warpStyle`.
+ */
+declare enum WarpStyle {
+     ARC,
+     ARCH,
+     ARCLOWER,
+     ARCUPPER,
+     BULGE,
+     FISH,
+     FISHEYE,
+     FLAG,
+     INFLATE,
+     NONE,
+     RISE,
+     SHELLLOWER,
+     SHELLUPPER,
+     SQUEEZE,
+     TWIST,
+     WAVE
+}
+
+/**
+ * The style of strikethrough to use in text.
+ * Used in `TextItem.strikeThru`.
+ */
+
+declare enum StrikeThruType {
+     STRIKEBOX,
+     STRIKEHEIGHT,
+     STRIKEOFF
 }

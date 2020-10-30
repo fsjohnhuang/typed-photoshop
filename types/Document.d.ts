@@ -20,17 +20,17 @@ declare class Document {
     activeHistoryState: Guide
     /** Read-write. The selected layer. */
     activeLayer: ArtLayer | LayerSet
-    /** Read-only. The art layers collection. */
+    /** @readonly The art layers collection. */
     readonly activeLayers: ArtLayers
-    /** Read-only. The background layer of the document. */
+    /** @readonly The background layer of the document. */
     readonly backgroundLayer: ArtLayer
     /** Read-write. The number of bits per channel. */
     bitsPerChannel: BitsPerChannelType
-    /** Read-only. The channels collection. */
+    /** @readonly The channels collection. */
     readonly channels: Channels
-    /** Read-only. This document is in the cloud. */
+    /** @readonly This document is in the cloud. */
     readonly cloudDocument: boolean
-    /** Read-only. Local directory for this cloud document. */
+    /** @readonly Local directory for this cloud document. */
     readonly cloudWorkAreaDirectory: any 
     /** 
      * Read-write. The name of the color profile.
@@ -39,74 +39,74 @@ declare class Document {
     colorProfileName: string
     /** Read-write. Whether the document uses the working color profile, a custom profile, or no profile. */
     colorProfileType: ColorProfileType
-    /** Read-only. The current color samplers associated with this document. */
+    /** @readonly The current color samplers associated with this document. */
     readonly colorSamplers: ColorSamplers
     /** 
-     * Read-only. The color channels that make up the document;
+     * @readonly The color channels that make up the document;
      * for instance, the Red, Green and Blue channels for and RGB document.
      */
     readonly componentChannels: Channel[]
-    /** Read-only. The current count items. */
+    /** @readonly The current count items. */
     readonly countItem: CountItem
-    /** Read-only. The full path name of the document. */
+    /** @readonly The full path name of the document. */
     readonly fullName: File
-    /** Read-only. The guides collection. */
+    /** @readonly The guides collection. */
     readonly guides: Guides
-    /** Read-only. The height of the document(unit value). */
+    /** @readonly The height of the document(unit value). */
     readonly height: UnitValue
     /** 
-     * Read-only. A histogram showing the number of pixels at each color intensity level for the composite channel.
+     * @readonly A histogram showing the number of pixels at each color intensity level for the composite channel.
      * The array contains 256 members.
      * Valid only when `mode` = `DocumentMode.RGB`, `CMYK` or `INDEXEDCOLOR`
      */
     readonly histogram: number[]
-    /** Read-only. The history states collection. */
+    /** @readonly The history states collection. */
     readonly historyStates: HistoryStates
-    /** Read-only. Metadata about the document. */
+    /** @readonly. Metadata about the document. */
     readonly info: DocumentInfo
-    /** Read-only. The layer compositions collection. */
+    /** @readonly. The layer compositions collection. */
     readonly layerComps: LayerComps
-    /** Read-only. The layers collection. */
+    /** @readonly. The layers collection. */
     readonly layers: Layers
-    /** Read-only. The layer set collection. */
+    /** @readonly. The layer set collection. */
     readonly layerSets: LayerSets
-    /** Read-only. True if the document is a workgroup document. */
+    /** @readonly. True if the document is a workgroup document. */
     readonly managed: boolean
     /** 
-     * Read-only. The measurement scale for the document.
+     * @readonly. The measurement scale for the document.
      * *Note:*
      * The measurement scale feature is available in the Extended version only.
      */
     readonly measurementScale: MeasurementScale
-    /** Read-only. The color profile. */
+    /** @readonly. The color profile. */
     readonly mode: DocumentMode
-    /** Read-only. The document's name. */
+    /** @readonly. The document's name. */
     readonly name: string
-    /** Read-only. The application object that contains this document. */
+    /** @readonly. The application object that contains this document. */
     readonly parent: Application
-    /** Read-only. The path to the document. */
+    /** @readonly. The path to the document. */
     readonly path: File
-    /** Read-only. The path items collection. */
+    /** @readonly. The path items collection. */
     readonly pathItems: PathItems
     /** Read-write. The (custom) pixel aspect ratio to use. */
     pixelAspectRatio: number
-    /** Read-only. The print settings for the document. */
+    /** @readonly. The print settings for the document. */
     readonly printSettings: DocumentPrintSettings
     /** Read-write. True if the document is in Quick Mask mode. */
     quickMaskMode: boolean
-    /** Read-only. The document's resolution(in pixels per inch). */
+    /** @readonly. The document's resolution(in pixels per inch). */
     readonly resolution: number
-    /** Read-only. True if the document has been saved since the last change. */
+    /** @readonly. True if the document has been saved since the last change. */
     readonly saved: boolean
-    /** Read-only. The selected area of the document. */
+    /** @readonly. The selected area of the document. */
     readonly selection: Selection
     /** 
-     * Read-only. The class name of the `Document` object.
+     * @readonly. The class name of the `Document` object.
      */
     readonly typename: string
-    /** Read-only. The width of the document(unit value). */
+    /** @readonly. The width of the document(unit value). */
     readonly width: UnitValue
-    /** Read-only. XMP metadata for the document. Camera RAW settings for the image are stored here for example. */
+    /** @readonly. XMP metadata for the document. Camera RAW settings for the image are stored here for example. */
     readonly xmpMetadata: xmpMetadata
 
     /**

@@ -5,12 +5,12 @@
  * `app.activeDocument.layerComps.add("myLayerComp", "View from Shoreline", true, true, true)`
  */
 declare class LayerComps {
-    [index: number]: LayerComp
-    /** Read-only. The number of elements in the LayerComps collection. */
+    readonly [index: number]: LayerComp
+    /** @readonly The number of elements in the LayerComps collection. */
     readonly length: number
-    /** Read-only. The containing document. */
+    /** @readonly The containing document. */
     readonly parent: Document
-    /** Read-only. The class name of the referenced LayerComps object. */
+    /** @readonly The class name of the referenced LayerComps object. */
     readonly typename: string
 
     /** Creates a new layer composition object and adds it into this collection. */

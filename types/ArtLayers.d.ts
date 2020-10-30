@@ -4,7 +4,7 @@
  * For example: `var layerRef = docRef.artLayers.add()`
  */
 declare class ArtLayers {
-    [index: number]: ArtLayer
+    readonly [index: number]: ArtLayer
     /** Read-only. The nubmer of elements in the artLayers collection. */
     readonly length: number
     /** Read-only. The object's container. */

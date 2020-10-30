@@ -3,7 +3,8 @@
  */
 declare interface Folder {}
 declare interface FolderConstructor {
-    new(path: string): Folder
+    new (path: string): Folder
+    (path: string): Folder
 }
 
 declare var Folder: FolderConstructor

@@ -3,11 +3,11 @@
  * Access through `Document.historyStates` collection property.
  */
 declare class HistoryStates {
-    /** Read-only. The number of elements in the HistoryStates collection. */
+    /** @readonly The number of elements in the HistoryStates collection. */
     readonly length: number
-    /** Read-only. The containing document. */
+    /** @readonly The containing document. */
     readonly parent: Document
-    /** Read-only. The class name of the referenced HistoryStates object. */
+    /** @readonly The class name of the referenced HistoryStates object. */
     readonly typename: string
 
     /**

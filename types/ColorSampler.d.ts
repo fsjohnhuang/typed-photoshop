@@ -4,17 +4,17 @@
  * `var colorSamplerRef = app.activeDocument.colorSamplers[0]`
  */
 declare class ColorSampler {
-    /** Read-only. The color of the color sampler */
+    /** @readonly The color of the color sampler */
     readonly color: SolidColor
     /** 
-     * Read-only. The position of the color sampler in the document.
+     * @readonly The position of the color sampler in the document.
      * The array (x, y) represents the horizontal and vertical locaiton of the count item.
      */
     readonly position: UnitValue[]
-    /** Read-only. The containing document. */
+    /** @readonly The containing document. */
     readonly parent: Document
     /** 
-     * Read-only. The class name of the referenced `ColorSampler` object.
+     * @readonly The class name of the referenced `ColorSampler` object.
      */
     readonly typename: string
 

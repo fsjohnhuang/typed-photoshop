@@ -7,6 +7,6 @@ declare class RGBColor {
     hexValue: string
     /** Read-write. The red color value(default:255, range in [0..255]) */
     red: number
-    /** Read-only. The class name of the referenced RGBColor object. */
+    /** @readonly The class name of the referenced RGBColor object. */
     readonly typename: string
 }

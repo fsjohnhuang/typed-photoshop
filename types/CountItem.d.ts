@@ -5,11 +5,11 @@
  * This feature is available in the Extended Version only.
  */
 declare class CountItem {
-    /** Read-only. The position of the count item in the document. */
+    /** @readonly The position of the count item in the document. */
     readonly position: UnitValue[]
-    /** Read-only. The containing document. */
+    /** @readonly The containing document. */
     readonly parent: Document
-    /** Read-only. The class name of the referenced CountItem object. */
+    /** @readonly The class name of the referenced CountItem object. */
     readonly typename: string
 
     /** Deletes the CountItem object. */

@@ -3,11 +3,11 @@
  * Access through `Documenet.layers`, or the `LayerSet.layers` collection properties.
  */
 declare class Layers {
-    /** Read-only. The number of elements in the Layers collection. */
+    /** @readonly The number of elements in the Layers collection. */
     readonly length: number
-    /** Read-only. The containing document or layer set. */
+    /** @readonly The containing document or layer set. */
     readonly parent: Document | LayerSet
-    /** Read-only. The class name of the referenced Layers object. */
+    /** @readonly The class name of the referenced Layers object. */
     readonly typename: string
 
     /** Gets the first element in the collection with provided name. */
