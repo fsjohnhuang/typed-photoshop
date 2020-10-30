@@ -23,7 +23,8 @@ app.close()
 ## Recommendation
 ### Polyfill
 Since ExtendScript is based on ES3, there is no built-in `Array.prototype.map` method and other modern JavaScript APIs for you. `core-js` is a strong and widely used polyfill library, but there is a sad story that errors occur running on ExtendScript engine. Fortunately, `es5-shim` works fine.
-Meanwhile the lack of the support of JSON is a pain to us yet, `json2` would be a great way to make up.
+
+Meanwhile `json2` help us to fit the pain from the lack of native JSON support .
 
 ### Installation
 ```
