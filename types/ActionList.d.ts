@@ -1,8 +1,11 @@
-declare interface ActionList {
+declare interface ActionList {}
+declare interface ActionListConstructor {
+    new (): ActionList
     /** @readonly The number of commands that comprise the action. */
     readonly count: number
-    /** 
-     * @readonly The class name of the referenced `ActionReference` object 
+
+    /**
+     * @readonly The class name of the referenced `ActionReference` object
      */
     readonly typename: string
 
@@ -38,3 +41,5 @@ declare interface ActionList {
     putString(value: string): void
     putUnitDouble(classID: number, value: number): void
 }
+
+declare var ActionList: ActionListConstructor

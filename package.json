@@ -1,6 +1,6 @@
 {
   "name": "typed-photoshop",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "TypeScript typings for Photoshop ExtendScript.",
   "main": "index.js",
   "keywords": [
