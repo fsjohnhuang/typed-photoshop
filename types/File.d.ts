@@ -6,7 +6,7 @@ declare interface FileConstructor {
     new (path: string): File
     (path: string): File
 
-    /** 
+    /**
      * @readonly Gets current OS style full path.
      * For example:
      * E:\backup\newfile.txt in Windows
