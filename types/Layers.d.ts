@@ -3,6 +3,9 @@
  * Access through `Documenet.layers`, or the `LayerSet.layers` collection properties.
  */
 declare class Layers {
+    /**
+     * The most top layer is the first one, and the bottom layer is the last one.
+     */
     readonly [index: number]: ArtLayer | LayerSet
     /** @readonly The number of elements in the Layers collection. */
     readonly length: number

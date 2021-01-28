@@ -1,10 +1,10 @@
 /**
- * The active containment object for layers and all other objects in the script; the basic canvas for the file. 
+ * The active containment object for layers and all other objects in the script; the basic canvas for the file.
  * Access the object for the currently active document through `Application.activeDocument`.
  * You can access other documents, or iterate through all open documents using the list in the `Application.documents` collection.
  * You can access individual documents in the list by index, or use `Documents.getByName()` to retrieve them by name.
  * Create documents programmatically using the `Documents.add()` method.
- * *Note:* 
+ * *Note:*
  * In Adobe Photoshop, a document can also be referred to as an image or a canvas.
  * The term image refers to the entire document and its contents. You can trim or crop an image. You resize an image using the `resizeImage()` method.
  * The term canvas refers to the space in which the document sits on the screen. You can rotate or flip the canvas. You resize the canvas using the `resizeCanvas()` method.
@@ -14,14 +14,14 @@ declare class Document {
     activeChannels: Channel[]
     /** Read-write. The history state to use with the history brush. */
     activeHistoryBrushSource: Guide
-    /** 
-     * Read-write. The selected `HistoryState` object. 
+    /**
+     * Read-write. The selected `HistoryState` object.
      */
     activeHistoryState: Guide
     /** Read-write. The selected layer. */
     activeLayer: ArtLayer | LayerSet
     /** @readonly The art layers collection. */
-    readonly activeLayers: ArtLayers
+    readonly artLayers: ArtLayers
     /** @readonly The background layer of the document. */
     readonly backgroundLayer: ArtLayer
     /** Read-write. The number of bits per channel. */
@@ -31,8 +31,8 @@ declare class Document {
     /** @readonly This document is in the cloud. */
     readonly cloudDocument: boolean
     /** @readonly Local directory for this cloud document. */
-    readonly cloudWorkAreaDirectory: any 
-    /** 
+    readonly cloudWorkAreaDirectory: any
+    /**
      * Read-write. The name of the color profile.
      * Valid only when `colorProfileType` = `ColorProfile.CUSTOM` or `WORKING`.
      */
@@ -41,7 +41,7 @@ declare class Document {
     colorProfileType: ColorProfileType
     /** @readonly The current color samplers associated with this document. */
     readonly colorSamplers: ColorSamplers
-    /** 
+    /**
      * @readonly The color channels that make up the document;
      * for instance, the Red, Green and Blue channels for and RGB document.
      */
@@ -54,7 +54,7 @@ declare class Document {
     readonly guides: Guides
     /** @readonly The height of the document(unit value). */
     readonly height: UnitValue
-    /** 
+    /**
      * @readonly A histogram showing the number of pixels at each color intensity level for the composite channel.
      * The array contains 256 members.
      * Valid only when `mode` = `DocumentMode.RGB`, `CMYK` or `INDEXEDCOLOR`
@@ -72,7 +72,7 @@ declare class Document {
     readonly layerSets: LayerSets
     /** @readonly. True if the document is a workgroup document. */
     readonly managed: boolean
-    /** 
+    /**
      * @readonly. The measurement scale for the document.
      * *Note:*
      * The measurement scale feature is available in the Extended version only.
@@ -100,7 +100,7 @@ declare class Document {
     readonly saved: boolean
     /** @readonly. The selected area of the document. */
     readonly selection: Selection
-    /** 
+    /**
      * @readonly. The class name of the `Document` object.
      */
     readonly typename: string
@@ -169,7 +169,7 @@ declare class Document {
     /** Record measurements of document. */
     recordMeasurements(source?: MeasurementSource, dataPoints?: string[]): void
     /**
-     * Changes the size of the canvas to display more or less of the image but does not change the image size. See `resizeImage`. 
+     * Changes the size of the canvas to display more or less of the image but does not change the image size. See `resizeImage`.
      */
     resizeCanvas(width?: UnitValue, height?: UnitValue, anchor?: AnchorPosition): void
     /**
@@ -215,10 +215,10 @@ declare class Document {
     suspendHistory(historyString: string, javaScriptString: string): void
     /**
      * Applies trapping to a CMYK document.
-     * Valid only when `docRef.mode` = `DocumentMode.CMYK`. 
+     * Valid only when `docRef.mode` = `DocumentMode.CMYK`.
      */
     trap(width: number): void
-    /** 
+    /**
      * Trims the transparent area around the image on the specified sides of the canvas.
      * Default is `true` for all Boolean parameters.
      */
