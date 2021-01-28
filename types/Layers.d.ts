@@ -3,6 +3,7 @@
  * Access through `Documenet.layers`, or the `LayerSet.layers` collection properties.
  */
 declare class Layers {
+    readonly [index: number]: ArtLayer | LayerSet
     /** @readonly The number of elements in the Layers collection. */
     readonly length: number
     /** @readonly The containing document or layer set. */

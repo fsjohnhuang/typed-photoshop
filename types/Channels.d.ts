@@ -18,7 +18,7 @@ declare class Channels {
      */
     add(): Channel
     /**
-     * Gets the first element in the Channels collection with the provided name. 
+     * Gets the first element in the Channels collection with the provided name.
      */
     getByName(name: string): Channel
     /**
