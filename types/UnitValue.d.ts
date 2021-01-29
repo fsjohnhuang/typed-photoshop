@@ -6,11 +6,11 @@ declare interface UnitValue {
      * @example
      * var a = UnitValue("22 px")
      * a.as("cm") // 0.7761111
-     * b // 22 px
+     * a // 22 px
      */
     as(unit: Unit): number
     /**
-     * Converts the variable to the value represented in indicated unit. 
+     * Converts the variable to the value represented in indicated unit.
      * @example
      * var a = UnitValue("22 px")
      * a.convert("cm") // true
@@ -20,10 +20,10 @@ declare interface UnitValue {
 }
 
 declare interface UnitValueConstructor {
-    new (x: number, y: number): UnitValue
+    new (value: number, unit: string): UnitValue
     new (unitValue: string): UnitValue
     (unitValue: string): UnitValue
-    (x: number, y: number): UnitValue
+    (value: number, unit: string): UnitValue
 }
 
 declare var UnitValue: UnitValueConstructor & object
