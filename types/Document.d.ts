@@ -176,7 +176,7 @@ declare class Document {
      * Changes the size of the image.
      * The `amount` parameter controls the amount of noise value when using preserve details(Range:0-100)
      */
-    reiszeImage(width?: UnitValue, height?: UnitValue, resolution?: number, resampleMethod?: ResampleMethod, amount?: number): void
+    resizeImage(width?: UnitValue, height?: UnitValue, resolution?: number, resampleMethod?: ResampleMethod, amount?: number): void
     /** Expands the document to show clipped sections. */
     revealAll(): void
     /** Rotates the canvas(including the image) in clockwise direction. */
